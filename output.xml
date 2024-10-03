@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-10-02T22:00:27.721221" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Pesquisa Amazon" source="c:\Users\kaiqu\OneDrive\Documentos\robot\teste_pesquisa_amazon.robot">
+<test id="s1-t1" name="Pesquisa de Produto na Amazon" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-02T22:00:28.349733" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-02T22:00:28.349733" elapsed="19.396663"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-02T22:00:48.562315" level="INFO">Typing text 'notebook' into text field 'id=twotabsearchtextbox'.</msg>
+<arg>id=twotabsearchtextbox</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T22:00:47.984543" elapsed="1.582025"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-02T22:00:49.598609" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<arg>id=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T22:00:49.598609" elapsed="9.769538"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-02T22:00:59.683344" level="INFO">Current page contains text 'notebook'.</msg>
+<arg>${PRODUTO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-02T22:00:59.497623" elapsed="0.185721"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-02T22:00:59.747746" elapsed="4.969673"/>
+</kw>
+<status status="PASS" start="2024-10-02T22:00:28.349733" elapsed="36.375206"/>
+</test>
+<status status="PASS" start="2024-10-02T22:00:27.731292" elapsed="36.999646"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste Pesquisa Amazon">Teste Pesquisa Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
